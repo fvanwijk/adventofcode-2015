@@ -30,8 +30,13 @@ function nextPassword(input) {
   return arr.join('');
 }
 
-var pass = nextPassword('hxbxwxba');
-while (!isValid(pass)) {
+function nextValidPassword(pass) {
   pass = nextPassword(pass);
+  while (!isValid(pass)) {
+    pass = nextPassword(pass);
+  }
+  return pass;
 }
-console.log('The next password is ' + pass);
+
+console.log('The next password is ' + nextValidPassword('hxbxwxba'));
+console.log('The second next password is ' + nextValidPassword((nextValidPassword('hxbxwxba'))));
