@@ -16,7 +16,7 @@ require('fs').readFile('15.txt', 'utf8', function (err, str) {
       }
     }
 
-    return Math.max(0, res.capacity) * Math.max(0, res.durability) * Math.max(0, res.flavor) * Math.max(0, res.texture);
+    return res.calories == 500 ? Math.max(0, res.capacity) * Math.max(0, res.durability) * Math.max(0, res.flavor) * Math.max(0, res.texture) : 0;
   }
 
   const ingredients = str.split('\n').reduce(function (acc, ingredient) {
