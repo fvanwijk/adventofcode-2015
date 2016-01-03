@@ -24,7 +24,7 @@ require('fs').readFile('16.txt', 'utf8', function (err, str) {
 
   for (var i = 0; i < aunts.length; i++) {
     var isCorrectAunt = true;
-    for (prop in aunts[i]) {
+    for (var prop in aunts[i]) {
       //console.log('compare ' + prop + ' ' + aunts[i][prop] + ' with ' + props[prop]);
       if (aunts[i][prop] !== props[prop]) {
         isCorrectAunt = false;
