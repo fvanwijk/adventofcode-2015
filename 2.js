@@ -1,5 +1,5 @@
-require('fs').readFile('2.txt', 'utf8', function (err, contents) {
-  const res = contents.split('\n').reduce(function (res, box) {
+require('fs').readFile('2.txt', 'utf8', (err, contents) => {
+  const res = contents.split('\n').reduce((res, box) => {
     const
       [l, b, h] = box.split('x').map(i => +i),
       longestSide = Math.max(Math.max(l,b),h),

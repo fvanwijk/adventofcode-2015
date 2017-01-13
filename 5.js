@@ -1,5 +1,5 @@
-require('fs').readFile('5.txt', 'utf8', function (err, str) {
-  const res = str.split('\n').reduce(function (count, word) {
+require('fs').readFile('5.txt', 'utf8', (err, str) => {
+  const res = str.split('\n').reduce((count, word) => {
     var tests = {
       sameLetterPair: /(\w)\1/.test(word),
       vowels: /([aeiou]\w*){3,}/.test(word),
